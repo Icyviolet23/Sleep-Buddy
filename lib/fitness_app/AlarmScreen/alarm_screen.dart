@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/fitness_app/AlarmScreen/set_alarm.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/area_list_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/running_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/title_view.dart';
@@ -79,6 +80,17 @@ class _AlarmScreenState extends State<AlarmScreen>
         animationController: widget.animationController!,
       ),
     );
+
+    listViews.add(
+      SETALARMView(
+        animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+            parent: widget.animationController!,
+            curve:
+            Interval((1 / count) * 3, 1.0, curve: Curves.fastOutSlowIn))),
+        animationController: widget.animationController!,
+      ),
+    );
+
     listViews.add(
       RunningView(
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
@@ -88,6 +100,8 @@ class _AlarmScreenState extends State<AlarmScreen>
         animationController: widget.animationController!,
       ),
     );
+
+
 
     listViews.add(
       TitleView(
