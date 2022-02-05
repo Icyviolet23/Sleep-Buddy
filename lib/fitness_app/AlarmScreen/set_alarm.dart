@@ -59,7 +59,7 @@ class SETALARMView extends StatelessWidget {
                                           top: 16,
                                         ),
                                         child: Text(
-                                          "Set your alarm here",
+                                          "Set your sleep timings and alarms",
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontFamily:
@@ -86,7 +86,7 @@ class SETALARMView extends StatelessWidget {
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontFamily: FitnessAppTheme.fontName,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.bold,
                                         fontSize: 12,
                                         letterSpacing: 0.0,
                                         color: FitnessAppTheme.grey
@@ -102,7 +102,7 @@ class SETALARMView extends StatelessWidget {
                       ),
                       Positioned(
                         top: 7,
-                        left: -3,
+                        left: 0,
                         child: SizedBox(
                           width: 80,
                           height: 80,

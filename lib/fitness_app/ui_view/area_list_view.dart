@@ -17,10 +17,10 @@ class _AreaListViewState extends State<AreaListView>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   List<String> areaListData = <String>[
-    'assets/fitness_app/area1.png',
-    'assets/fitness_app/area2.png',
-    'assets/fitness_app/area3.png',
-    'assets/fitness_app/area1.png',
+    'assets/fitness_app/76101.png',
+    'assets/fitness_app/15251.png',
+    'assets/fitness_app/15150.png',
+    'assets/fitness_app/ryan.png',
   ];
 
   @override
@@ -139,11 +139,7 @@ class AreaView extends StatelessWidget {
                   onTap: () {},
                   child: Column(
                     children: <Widget>[
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(top: 16, left: 16, right: 16),
-                        child: Image.asset(imagepath!),
-                      ),
+                      Image.asset(imagepath!),
                     ],
                   ),
                 ),
