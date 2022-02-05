@@ -19,6 +19,7 @@ class AppTheme {
   static const Color spacer = Color(0xFFF2F2F2);
   static const String fontName = 'WorkSans';
 
+
   static const TextTheme textTheme = TextTheme(
     headline4: display1,
     headline5: headline,

@@ -32,7 +32,7 @@ class WorkoutView extends StatelessWidget {
                       topLeft: Radius.circular(8.0),
                       bottomLeft: Radius.circular(8.0),
                       bottomRight: Radius.circular(8.0),
-                      topRight: Radius.circular(68.0)),
+                      topRight: Radius.circular(8.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: FitnessAppTheme.grey.withOpacity(0.6),
@@ -44,36 +44,28 @@ class WorkoutView extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Next workout',
+                        'Stop Alarm',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontFamily: FitnessAppTheme.fontName,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
                           letterSpacing: 0.0,
                           color: FitnessAppTheme.white,
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
-                        child: const Text(
-                          'Legs Toning and\nGlutes Workout at Home',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontFamily: FitnessAppTheme.fontName,
-                            fontWeight: FontWeight.normal,
-                            fontSize: 20,
-                            letterSpacing: 0.0,
-                            color: FitnessAppTheme.white,
-                          ),
-                        ),
+                        child: Icon(
+                          Icons.alarm_off_sharp,
+                          color: HexColor("#FFFFFF"),
+                          size: 150,
                       ),
-                      SizedBox(
-                        height: 32,
                       ),
+
                       Padding(
                         padding: const EdgeInsets.only(right: 4),
                         child: Row(
@@ -91,7 +83,7 @@ class WorkoutView extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 4.0),
                               child: const Text(
-                                '68 min',
+                                '10 min',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: FitnessAppTheme.fontName,
@@ -120,7 +112,7 @@ class WorkoutView extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.all(0.0),
                                 child: Icon(
-                                  Icons.arrow_right,
+                                  Icons.snooze_sharp,
                                   color: HexColor("#6F56E8"),
                                   size: 44,
                                 ),

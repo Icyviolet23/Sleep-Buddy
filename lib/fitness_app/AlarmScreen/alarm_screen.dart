@@ -60,7 +60,7 @@ class _AlarmScreenState extends State<AlarmScreen>
 
     listViews.add(
       TitleView(
-        titleTxt: 'Your program',
+        titleTxt: 'Track Your Progress',
         subTxt: 'Details',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
@@ -91,8 +91,8 @@ class _AlarmScreenState extends State<AlarmScreen>
 
     listViews.add(
       TitleView(
-        titleTxt: 'Area of focus',
-        subTxt: 'more',
+        titleTxt: 'Tasks to do',
+        subTxt: 'Calendar',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
             curve:
@@ -207,7 +207,7 @@ class _AlarmScreenState extends State<AlarmScreen>
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  'Training',
+                                  'Alarm',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontFamily: FitnessAppTheme.fontName,
