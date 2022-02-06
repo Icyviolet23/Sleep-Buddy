@@ -1,32 +1,36 @@
-# sleep_cycle
+# Sleep Buddy
 
 Tartanhacks 2022
 
 ## Elevator Pitch
 
-Do you always feel constantly tired no matter how long you sleep? Do you always end up sleeping extremely late even though you want to go to bed early?
-Have no fear! We are here to fix your Sleep Cycle.
+Have you ever wanted to sleep early but ended up procrastinating in your bed scrolling through endless TikTok videos? Have you ever tried setting a sleep schedule but eventually gave up? Well, have no fear! "Sleep Buddy" is here!
 
-## What is Sleep Cycle?
+## What is "Sleep Buddy"?
 
-Our mobile app "Sleep Cycle" aims to help you sleep healthy by gamifying your experience! Based on your current schedule, Sleep Cycle predicts the best times when you should sleep and wake up.
+Our mobile app uses gamification to incentivize users to maintain a healthy sleep schedule. Based on your current sleep schedule determined by a quick 15 minute questionnaire, the app's in-built artificial neural network recommends the best sleep timings that you should adopt. As you continue to use the app, "Sleep Buddy" uses deep reinforcement learning eventually improves it recommender system to provide the best strategies to improve sleep cycle that cater to the specific user.
+
 Increase your damage to defeat the monster by sticking to the recommended sleep schedule and earn gold for every monster defeated! Share your progress with your friends on social media.
 
-Sleep Cycle monitors your sleeping patterns and tracks the amount of sleep debt you have. Based on your motion after the alarm sounds, the app will track whether you are awake and remind you to wake up!
-Sleep Cycle provides you with graphs to track your sleep progress as well as reminders on your daily activities to keep you productive!
+Using deep reinforcement learning, Sleep Buddy monitors your sleeping patterns and tracks the amount of sleep debt you have. Based on your motion after the alarm sounds, the app will track whether you are awake and remind you to wake up!
+
+Finally, Sleep Buddy provides you with graphs to track your sleep progress as well as reminders on your daily activities to keep you productive!
 
 ## How we build it
 
-We built the whole app based on flutter!
+The entire skeleton of the app was made using Flutter - an open source UI development kit for mobile applications. 
 
 ## Challenges we ran into
 
-- Learning a new language (Flutter).
-- Implementing graphics in Flutter is hard.
-- Installing flutter.
+The first challenge that we ran into is learning a new language, DART. However, as most of us had experience with Javascript, it was rather quick to pick up DART given the similarities in the syntax of DART with Javascript. 
+
+Our next challenge was implementing graphics in Flutter. As we were not familiar with the use of flutter, it was difficult to get sprite packages to work on Flutter. However, we eventually played around more with Flutter and learned how to implement graphics packages on Flutter. 
+
 
 ## What we learned
 
-- We learnt a new language!
-- We learnt how to make an app streamlined and well designed!
+The biggest takeaway from the hackathon is learning a new language to implement Flutter (DART). This was definitely a really big takeaway, because flutter is a widely-known and useful app for mobile application development, hence, learning DART was very essential.
+
+After following some tutorials online, we learned how to streamline applications and make well-designed mobile applications. 
+
 - We learnt that everything is a widget in flutter.
