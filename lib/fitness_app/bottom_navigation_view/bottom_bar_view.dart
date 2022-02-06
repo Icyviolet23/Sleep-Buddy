@@ -253,7 +253,14 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                           parent: widget.tabIconData!.animationController!,
                           curve:
                               Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
-                  child: Image.asset(widget.tabIconData!.isSelected
+                  child: widget.tabIconData!.index == 1 ? (widget.tabIconData!.isSelected ?
+                  Transform.scale(child: Image.asset(widget.tabIconData!.selectedImagePath,), scale: 0.8,) :
+                  Icon(
+                    Icons.alarm_on_sharp,
+                    color: Colors.grey,
+                    size: 35,
+                  )) :
+                  Image.asset(widget.tabIconData!.isSelected
                       ? widget.tabIconData!.selectedImagePath
                       : widget.tabIconData!.imagePath),
                 ),
