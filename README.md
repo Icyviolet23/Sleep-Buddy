@@ -35,6 +35,6 @@ After following some tutorials online, we learned how to streamline applications
 
 - We learnt that everything is a widget in flutter.
 
-## Template from
+## Inspired By
 
 https://github.com/mitesh77/Best-Flutter-UI-Templates
