@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
 
 class FirstFeedUI extends StatelessWidget {
   @override
@@ -46,23 +46,27 @@ class FirstFeedUI extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 15.0, top: 13),
                     child: Text(
-                      'Sound Byte',
-                      style: GoogleFonts.lato(
-                          color: Colors.grey[700],
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.bold),
+                      'Tom Zajdel',
+                      style: TextStyle(
+                        fontFamily: FitnessAppTheme.fontName,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        letterSpacing: 0.2,
+                        color: FitnessAppTheme.nearlyBlack,
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 5.0, top: 13),
                     child: Text(
-                      'is now connected',
-                      style: GoogleFonts.lato(
-                          color: Colors.grey[700],
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.normal),
+                      'shared a post by',
+                      style: TextStyle(
+                        fontFamily: FitnessAppTheme.fontName,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        letterSpacing: -0.2,
+                        color: FitnessAppTheme.darkerText,
+                      ),
                     ),
                   ),
                 ],
@@ -72,44 +76,30 @@ class FirstFeedUI extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0),
                     child: Text(
-                      'to',
-                      style: GoogleFonts.lato(
-                          color: Colors.grey[700],
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.normal),
+                      '',
+                      style: TextStyle(
+                        fontFamily: FitnessAppTheme.fontName,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        letterSpacing: -0.2,
+                        color: FitnessAppTheme.darkerText,
+                      ),
                     ),
                   ),
                   Padding(
                       padding: const EdgeInsets.only(left: 4.0),
                       child: Text(
-                        'Dina',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.bold),
-                      )),
-                  Padding(
-                      padding: const EdgeInsets.only(left: 4.0),
-                      child: Text(
-                        'and',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.normal),
-                      )),
-                  Padding(
-                      padding: const EdgeInsets.only(left: 4.0),
-                      child: Text(
-                        '8 others.',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.bold),
-                      )),
+                        'Tjun Jet Ong',
+                        style: TextStyle(
+                        fontFamily: FitnessAppTheme.fontName,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        letterSpacing: -0.2,
+                        color: FitnessAppTheme.darkerText,
+                      ),
+                      ),
+                  ),
+
                 ],
               ),
             ]),
@@ -181,70 +171,28 @@ class FirstFeedUI extends StatelessWidget {
                                   padding:
                                   const EdgeInsets.only(top: 20, left: 20),
                                   child: Text(
-                                    'Dina Foster',
-                                    style: GoogleFonts.averiaLibre(
-                                        color: Colors.grey[900],
-                                        fontSize: 18,
-                                        letterSpacing: 1,
-                                        fontWeight: FontWeight.bold),
+                                    'Tjun Jet Ong',
+                                    style: TextStyle(
+                                      fontFamily: FitnessAppTheme.fontName,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 18,
+                                      letterSpacing: -0.2,
+                                      color: FitnessAppTheme.darkerText,
+                                    ),
                                   )),
                               Padding(
                                   padding:
-                                  const EdgeInsets.only(top: 0, left: 20),
+                                  const EdgeInsets.only(top: 20, left: 20, right:20),
                                   child: Text(
-                                    'Technology Consultant at Dropbox',
-                                    style: GoogleFonts.lato(
-                                        color: Colors.grey[700],
-                                        fontSize: 14,
-                                        letterSpacing: 1,
-                                        fontWeight: FontWeight.normal),
+                                    'I cleared my sleep debt of 10 hours this week!',
+                                    style: TextStyle(
+                                      fontFamily: FitnessAppTheme.fontName,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 18,
+                                      letterSpacing: -0.2,
+                                      color: FitnessAppTheme.darkerText,
+                                    ),
                                   )),
-                              Padding(
-                                padding:
-                                const EdgeInsets.only(top: 18.0, left: 18),
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.phone,
-                                      color: Colors.black45,
-                                      size: 20,
-                                    ),
-                                    Text(
-                                      '   +91 - 9560419114',
-                                      style: GoogleFonts.lato(
-                                          color: Colors.grey[700],
-                                          fontSize: 14,
-                                          letterSpacing: 1,
-                                          fontWeight: FontWeight.normal),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                const EdgeInsets.only(left: 18.0, top: 8),
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.mail_outline,
-                                      color: Colors.black45,
-                                      size: 20,
-                                    ),
-                                    Padding(
-                                      padding:
-                                      const EdgeInsets.only(bottom: 2.0),
-                                      child: Text(
-                                        '   phinstudio@gmail.com',
-                                        style: GoogleFonts.averageSans(
-                                            color: Colors.grey[700],
-                                            fontSize: 16,
-                                            letterSpacing: 1,
-                                            fontWeight: FontWeight.normal),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
                             ],
                           ),
                         ),
@@ -272,55 +220,7 @@ class FirstFeedUI extends StatelessWidget {
             ],
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 2, left: 28.0),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 5.0),
-                    child: Image.asset(
-                      'images/like.png',
-                      height: 35,
-                    ),
-                  ),
-                  // Text(
-                  //   '45',
-                  //   style: GoogleFonts.averageSans(
-                  //       color: Colors.grey[700],
-                  //       fontSize: 22,
-                  //       letterSpacing: 1,
-                  //       fontWeight: FontWeight.normal),
-                  // ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4, right: 22.0),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 1.0),
-                    child: Image.network(
-                      'https://www.searchpng.com/wp-content/uploads/2019/02/Comment-Icon-PNG.png',
-                      height: 40,
-                    ),
-                  ),
-                  Text(
-                    '45',
-                    style: GoogleFonts.averageSans(
-                        color: Colors.grey[700],
-                        fontSize: 22,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.normal),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+
       ],
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
 
 class FivthFeedUI extends StatelessWidget {
   @override
@@ -44,23 +44,27 @@ class FivthFeedUI extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 15.0, top: 13),
                 child: Text(
-                  'Sound Byte',
-                  style: GoogleFonts.lato(
-                      color: Colors.grey[700],
-                      fontSize: 16,
-                      letterSpacing: 1,
-                      fontWeight: FontWeight.bold),
+                  'Ryan Lau',
+                  style: TextStyle(
+                    fontFamily: FitnessAppTheme.fontName,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 18,
+                    letterSpacing: -0.2,
+                    color: FitnessAppTheme.darkerText,
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
                   '1 hr',
-                  style: GoogleFonts.lato(
-                      color: Colors.grey[500],
-                      fontSize: 15,
-                      letterSpacing: 1,
-                      fontWeight: FontWeight.normal),
+                  style: TextStyle(
+                    fontFamily: FitnessAppTheme.fontName,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 18,
+                    letterSpacing: -0.2,
+                    color: FitnessAppTheme.darkerText,
+                  ),
                 ),
               ),
             ]),
@@ -69,13 +73,14 @@ class FivthFeedUI extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
           child: Text(
-            'Was great meeting up with Anna Ferguson and Dave Bishop at the breakfast talk!',
-            style: GoogleFonts.lato(
-                color: Colors.grey[600],
-                fontSize: 15,
-                letterSpacing: 1,
-                fontWeight: FontWeight.normal),
-            textAlign: TextAlign.justify,
+            'I had lunch with Tjun Jet today! For once, he is on time :) We went for a hike after lunch',
+            style: TextStyle(
+              fontFamily: FitnessAppTheme.fontName,
+              fontWeight: FontWeight.normal,
+              fontSize: 18,
+              letterSpacing: -0.2,
+              color: FitnessAppTheme.darkerText,
+            ),
           ),
         ),
         Padding(
@@ -90,55 +95,6 @@ class FivthFeedUI extends StatelessWidget {
                 child: Image.network(
                     'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'),
               )),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 2, left: 28.0),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 5.0),
-                    child: Image.asset(
-                      'images/like.png',
-                      height: 35,
-                    ),
-                  ),
-                  // Text(
-                  //   '45',
-                  //   style: GoogleFonts.averageSans(
-                  //       color: Colors.grey[700],
-                  //       fontSize: 22,
-                  //       letterSpacing: 1,
-                  //       fontWeight: FontWeight.normal),
-                  // ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 18, right: 22.0),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 1.0),
-                    child: Image.network(
-                      'https://www.searchpng.com/wp-content/uploads/2019/02/Comment-Icon-PNG.png',
-                      height: 40,
-                    ),
-                  ),
-                  Text(
-                    '45',
-                    style: GoogleFonts.averageSans(
-                        color: Colors.grey[700],
-                        fontSize: 22,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.normal),
-                  ),
-                ],
-              ),
-            ),
-          ],
         ),
       ],
     );

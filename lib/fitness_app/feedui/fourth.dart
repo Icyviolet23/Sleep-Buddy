@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
+
 
 class FourthFeedUI extends StatelessWidget {
   @override
@@ -47,22 +48,24 @@ class FourthFeedUI extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 15.0, top: 13),
                     child: Text(
                       'Sound Byte',
-                      style: GoogleFonts.lato(
-                          color: Colors.grey[700],
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                      fontFamily: FitnessAppTheme.fontName,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 18,
+                      letterSpacing: -0.2,
+                      color: FitnessAppTheme.darkerText,)
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 5.0, top: 13),
                     child: Text(
                       'has checked in',
-                      style: GoogleFonts.lato(
-                          color: Colors.grey[700],
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.normal),
+                      style: TextStyle(
+                      fontFamily: FitnessAppTheme.fontName,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 18,
+                      letterSpacing: -0.2,
+                      color: FitnessAppTheme.darkerText,)
                     ),
                   ),
                 ],
@@ -73,42 +76,46 @@ class FourthFeedUI extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 16.0),
                     child: Text(
                       'with',
-                      style: GoogleFonts.lato(
-                          color: Colors.grey[700],
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.normal),
+                      style: TextStyle(
+                        fontFamily: FitnessAppTheme.fontName,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        letterSpacing: -0.2,
+                        color: FitnessAppTheme.darkerText,),
                     ),
                   ),
                   Padding(
                       padding: const EdgeInsets.only(left: 4.0),
                       child: Text(
                         'Dina',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                        fontFamily: FitnessAppTheme.fontName,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        letterSpacing: -0.2,
+                        color: FitnessAppTheme.darkerText,)
                       )),
                   Padding(
                       padding: const EdgeInsets.only(left: 4.0),
                       child: Text(
                         'and',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.normal),
+                        style: TextStyle(
+                          fontFamily: FitnessAppTheme.fontName,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 18,
+                          letterSpacing: -0.2,
+                          color: FitnessAppTheme.darkerText,),
                       )),
                   Padding(
                       padding: const EdgeInsets.only(left: 4.0),
                       child: Text(
                         '8 others.',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontFamily: FitnessAppTheme.fontName,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 18,
+                          letterSpacing: -0.2,
+                          color: FitnessAppTheme.darkerText,),
                       )),
                 ],
               ),
@@ -126,11 +133,12 @@ class FourthFeedUI extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20.0, top: 16, right: 13),
           child: Text(
             'Here\'s Part 3 Of HTML Mini Series. Hope You all will enjoy',
-            style: GoogleFonts.lato(
-                color: Colors.grey[700],
-                fontSize: 15,
-                letterSpacing: 1,
-                fontWeight: FontWeight.normal),
+            style: TextStyle(
+              fontFamily: FitnessAppTheme.fontName,
+              fontWeight: FontWeight.normal,
+              fontSize: 18,
+              letterSpacing: -0.2,
+              color: FitnessAppTheme.darkerText,),
           ),
         ),
         SizedBox(
@@ -141,7 +149,7 @@ class FourthFeedUI extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 1.1,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              border: Border.all(color: Colors.grey[300]),
+              border: Border.all(color: FitnessAppTheme.darkerText),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -152,11 +160,12 @@ class FourthFeedUI extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 18.0, top: 13),
                       child: Text(
                         'HTML 5 Tip - Part 3',
-                        style: GoogleFonts.lato(
-                            color: Colors.grey[700],
-                            fontSize: 15,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontFamily: FitnessAppTheme.fontName,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 18,
+                          letterSpacing: -0.2,
+                          color: FitnessAppTheme.darkerText,),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -170,18 +179,19 @@ class FourthFeedUI extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius:
                               BorderRadius.all(Radius.circular(40)),
-                              border: Border.all(color: Colors.orange[400]),
+                              border: Border.all(color: FitnessAppTheme.darkerText),
                             ),
                             child: Padding(
                               padding: const EdgeInsets.only(
                                   left: 10.0, right: 10, top: 3, bottom: 3),
                               child: Text(
                                 'Advice',
-                                style: GoogleFonts.lato(
-                                    color: Colors.orange[400],
-                                    fontSize: 14,
-                                    letterSpacing: 1,
-                                    fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                  fontFamily: FitnessAppTheme.fontName,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 18,
+                                  letterSpacing: -0.2,
+                                  color: FitnessAppTheme.darkerText,),
                               ),
                             ),
                           ),
@@ -189,11 +199,12 @@ class FourthFeedUI extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           'Oct 6 - 7:21',
-                          style: GoogleFonts.lato(
-                              color: Colors.grey[500],
-                              fontSize: 14,
-                              letterSpacing: 1,
-                              fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                            fontFamily: FitnessAppTheme.fontName,
+                            fontWeight: FontWeight.normal,
+                            fontSize: 18,
+                            letterSpacing: -0.2,
+                            color: FitnessAppTheme.darkerText,),
                         ),
                       ],
                     ),
@@ -253,11 +264,13 @@ class FourthFeedUI extends StatelessWidget {
                   ),
                   Text(
                     '45',
-                    style: GoogleFonts.averageSans(
-                        color: Colors.grey[700],
-                        fontSize: 22,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.normal),
+                    style: TextStyle(
+                      fontFamily: FitnessAppTheme.fontName,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 18,
+                      letterSpacing: -0.2,
+                      color: FitnessAppTheme.darkerText,
+                    ),
                   ),
                 ],
               ),

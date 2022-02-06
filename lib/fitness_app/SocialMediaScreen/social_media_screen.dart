@@ -1,3 +1,12 @@
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/body_measurement.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/glass_view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/line_chart_view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/bar-chart-view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/mediterranean_diet_view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/title_view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
+import 'package:best_flutter_ui_templates/fitness_app/my_diary/meals_list_view.dart';
+import 'package:best_flutter_ui_templates/fitness_app/my_diary/water_view.dart';
 import 'package:flutter/material.dart';
 
 import '../feedui/first.dart';
@@ -5,132 +14,256 @@ import '../feedui/fivth.dart';
 import '../feedui/fourth.dart';
 import '../feedui/sixth.dart';
 
-class SocialMediaScreen extends StatelessWidget {
+class SocialMediaScreen extends StatefulWidget {
+  const SocialMediaScreen({Key? key, this.animationController}) : super(key: key);
+
+  final AnimationController? animationController;
+  @override
+  _SocialMediaScreenState createState() => _SocialMediaScreenState();
+}
+
+class _SocialMediaScreenState extends State<SocialMediaScreen>
+    with TickerProviderStateMixin {
+  Animation<double>? topBarAnimation;
+
+  List<Widget> listViews = <Widget>[];
+  final ScrollController scrollController = ScrollController();
+  double topBarOpacity = 0.0;
+
+  @override
+  void initState() {
+    topBarAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
+            parent: widget.animationController!,
+            curve: Interval(0, 0.5, curve: Curves.fastOutSlowIn)));
+    addAllListData();
+
+    scrollController.addListener(() {
+      if (scrollController.offset >= 24) {
+        if (topBarOpacity != 1.0) {
+          setState(() {
+            topBarOpacity = 1.0;
+          });
+        }
+      } else if (scrollController.offset <= 24 &&
+          scrollController.offset >= 0) {
+        if (topBarOpacity != scrollController.offset / 24) {
+          setState(() {
+            topBarOpacity = scrollController.offset / 24;
+          });
+        }
+      } else if (scrollController.offset <= 0) {
+        if (topBarOpacity != 0.0) {
+          setState(() {
+            topBarOpacity = 0.0;
+          });
+        }
+      }
+    });
+    super.initState();
+  }
+
+  void addAllListData() {
+    const int count = 3;
+
+
+
+    listViews.add(
+      FirstFeedUI(),
+      // SecondFeedUI(),
+      // ThirdFeedUI(),
+
+      // SixthFeedUI(),
+    );
+
+    listViews.add(
+      FivthFeedUI(),
+      // SecondFeedUI(),
+      // ThirdFeedUI(),
+
+      // SixthFeedUI(),
+    );
+
+  }
+
+  Future<bool> getData() async {
+    await Future<dynamic>.delayed(const Duration(milliseconds: 50));
+    return true;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 35,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 25.0),
-                        child: Image.asset(
-                          'images/logo.png',
-                          height: 30,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 6, left: 15.0),
-                        child: Text(
-                          'Socio Network',
-                          style: GoogleFonts.lato(
-                              color: Colors.grey[700],
-                              fontSize: 16,
-                              letterSpacing: 1,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
+    return Container(
+      color: FitnessAppTheme.background,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
+          children: <Widget>[
+            getMainListViewUI(),
+            getAppBarUI(),
+            SizedBox(
+              height: MediaQuery.of(context).padding.bottom,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget getMainListViewUI() {
+    return FutureBuilder<bool>(
+      future: getData(),
+      builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+        if (!snapshot.hasData) {
+          return const SizedBox();
+        } else {
+          return ListView.builder(
+            controller: scrollController,
+            padding: EdgeInsets.only(
+              top: AppBar().preferredSize.height +
+                  MediaQuery.of(context).padding.top +
+                  24,
+              bottom: 62 + MediaQuery.of(context).padding.bottom,
+            ),
+            itemCount: listViews.length,
+            scrollDirection: Axis.vertical,
+            itemBuilder: (BuildContext context, int index) {
+              widget.animationController?.forward();
+              return listViews[index];
+            },
+          );
+        }
+      },
+    );
+  }
+
+  Widget getAppBarUI() {
+    return Column(
+      children: <Widget>[
+        AnimatedBuilder(
+          animation: widget.animationController!,
+          builder: (BuildContext context, Widget? child) {
+            return FadeTransition(
+              opacity: topBarAnimation!,
+              child: Transform(
+                transform: Matrix4.translationValues(
+                    0.0, 30 * (1.0 - topBarAnimation!.value), 0.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: FitnessAppTheme.white.withOpacity(topBarOpacity),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(32.0),
+                    ),
+                    boxShadow: <BoxShadow>[
+                      BoxShadow(
+                          color: FitnessAppTheme.grey
+                              .withOpacity(0.4 * topBarOpacity),
+                          offset: const Offset(1.1, 1.1),
+                          blurRadius: 10.0),
                     ],
                   ),
-                  InkWell(
-                    onTap: () {
-                      var route = new MaterialPageRoute(
-                        builder: (BuildContext context) => new Connections(),
-                      );
-
-                      Navigator.of(context).push(route);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 20.0, top: 4),
-                      child: Icon(Icons.link),
-                    ),
-                  )
-                ],
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: MediaQuery.of(context).padding.top,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            left: 16,
+                            right: 16,
+                            top: 16 - 8.0 * topBarOpacity,
+                            bottom: 12 - 8.0 * topBarOpacity),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'My Diary',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontFamily: FitnessAppTheme.fontName,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 22 + 6 - 6 * topBarOpacity,
+                                    letterSpacing: 1.2,
+                                    color: FitnessAppTheme.darkerText,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 38,
+                              width: 38,
+                              child: InkWell(
+                                highlightColor: Colors.transparent,
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(32.0)),
+                                onTap: () {},
+                                child: Center(
+                                  child: Icon(
+                                    Icons.keyboard_arrow_left,
+                                    color: FitnessAppTheme.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 8,
+                                right: 8,
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 8),
+                                    child: Icon(
+                                      Icons.calendar_today,
+                                      color: FitnessAppTheme.grey,
+                                      size: 18,
+                                    ),
+                                  ),
+                                  Text(
+                                    '5 February',
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                      fontFamily: FitnessAppTheme.fontName,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 18,
+                                      letterSpacing: -0.2,
+                                      color: FitnessAppTheme.darkerText,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              height: 38,
+                              width: 38,
+                              child: InkWell(
+                                highlightColor: Colors.transparent,
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(32.0)),
+                                onTap: () {},
+                                child: Center(
+                                  child: Icon(
+                                    Icons.keyboard_arrow_right,
+                                    color: FitnessAppTheme.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              // Image.asset(
-              //   'images/first.png',
-              //   height: 300,
-              // ),
-              Container(color: Colors.white, height: 120, child: Status()),
-              SizedBox(
-                height: 5,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15.0, right: 15),
-                child: Divider(),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              FirstFeedUI(),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0, right: 18),
-                child: Divider(),
-              ),
-              SizedBox(
-                height: 0,
-              ),
-              SecondFeedUI(),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0, right: 18),
-                child: Divider(),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ThirdFeedUI(),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0, right: 18),
-                child: Divider(),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              FivthFeedUI(),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0, right: 18),
-                child: Divider(),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              FourthFeedUI(),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0, right: 18),
-                child: Divider(),
-              ),
-
-              SixthFeedUI(),
-            ],
-          ),
-        ));
+            );
+          },
+        )
+      ],
+    );
   }
 }
