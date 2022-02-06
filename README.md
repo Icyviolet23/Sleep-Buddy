@@ -18,15 +18,18 @@ Finally, Sleep Buddy provides you with graphs to track your sleep progress as we
 
 ## How we build it
 
-We built the whole app based on flutter!
+The entire skeleton of the app was made using Flutter - an open source UI development kit for mobile applications. 
 
 ## Challenges we ran into
 
-- Learning a new language (DART).
-- Implementing graphics in Flutter is hard.
-- Installing flutter.
+The first challenge that we ran into is learning a new language, DART. However, as most of us had experience with Javascript, it was rather quick to pick up DART given the similarities in the syntax of DART with Javascript. 
+
+Our next challenge was implementing graphics in Flutter. As we were not familiar with the use of flutter, it was difficult to get sprite packages to work on Flutter. However, we eventually played around more with Flutter and learned how to implement graphics packages on Flutter. 
+
 
 ## What we learned
+
+The biggest takeaway from the hackathon is learning a new 
 
 - We learnt a new language!
 - We learnt how to make an app streamlined and well designed!
