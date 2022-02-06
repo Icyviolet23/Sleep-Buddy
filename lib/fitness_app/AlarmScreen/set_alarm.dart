@@ -118,7 +118,7 @@ class SETALARMView extends StatelessWidget {
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontFamily: FitnessAppTheme.fontName,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.bold,
                                         fontSize: 15,
                                         letterSpacing: 0.0,
                                         color: FitnessAppTheme.nearlyDarkBlue
