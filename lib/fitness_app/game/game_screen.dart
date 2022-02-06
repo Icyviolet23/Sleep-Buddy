@@ -1,4 +1,4 @@
-import 'package:best_flutter_ui_templates/fitness_app/ui_view/body_measurement.dart';
+import 'package:best_flutter_ui_templates/fitness_app/ui_view/equipment_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/game_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/glass_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/mediterranean_diet_view.dart';
@@ -268,34 +268,41 @@ class _GameScreenState extends State<GameScreen>
                             bottom: 12 - 8.0 * topBarOpacity),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: CircleAvatar(
-                                backgroundColor: FitnessAppTheme.nearlyWhite,
-                                child: ClipOval(
-                                  child: Image.network("https://i.imgur.com/EbQJXuc.jpg"),
-                                ),
-                                radius: 20,
-                              ),
-                            ),
-                            Expanded(child: SizedBox()),
-                            SizedBox(
-                              height: 38,
-                              width: 38,
-                              child: InkWell(
-                                highlightColor: Colors.transparent,
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(32.0)),
-                                onTap: () {},
-                                child: Center(
-                                  child: Icon(
-                                    Icons.keyboard_arrow_left,
-                                    color: FitnessAppTheme.grey,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  CircleAvatar(
+                                    backgroundColor: FitnessAppTheme.nearlyWhite,
+                                    child: ClipOval(
+                                      child: Image.network("https://i.imgur.com/EbQJXuc.jpg"),
+                                    ),
+                                    radius: 20,
                                   ),
-                                ),
+                                  SizedBox(width: 10,),
+                                  Text(
+                                    "Lv. 12",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: -0.3
+                                    ),
+                                  )
+                                ]
                               ),
                             ),
+                            Expanded(child: Center(
+                              child: Text(
+                                "Sleep Buddy",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold
+                                  )
+                              )
+                            )),
                             Padding(
                               padding: const EdgeInsets.only(
                                 left: 8,
@@ -305,40 +312,22 @@ class _GameScreenState extends State<GameScreen>
                                 children: <Widget>[
                                   Padding(
                                     padding: const EdgeInsets.only(right: 8),
-                                    child: Icon(
-                                      Icons.calendar_today,
-                                      color: FitnessAppTheme.grey,
-                                      size: 18,
+                                    child: Image.asset(
+                                        'assets/images/dollar.png',
+                                      width: 20,
                                     ),
                                   ),
                                   Text(
-                                    '15 May',
+                                    'x182',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      fontFamily: FitnessAppTheme.fontName,
-                                      fontWeight: FontWeight.normal,
+                                      fontWeight: FontWeight.bold,
                                       fontSize: 18,
-                                      letterSpacing: -0.2,
+                                      letterSpacing: -0.3,
                                       color: FitnessAppTheme.darkerText,
                                     ),
                                   ),
                                 ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 38,
-                              width: 38,
-                              child: InkWell(
-                                highlightColor: Colors.transparent,
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(32.0)),
-                                onTap: () {},
-                                child: Center(
-                                  child: Icon(
-                                    Icons.keyboard_arrow_right,
-                                    color: FitnessAppTheme.grey,
-                                  ),
-                                ),
                               ),
                             ),
                           ],

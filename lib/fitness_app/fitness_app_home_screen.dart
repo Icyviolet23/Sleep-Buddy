@@ -31,7 +31,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
 
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
-    tabBody = MyDiaryScreen(animationController: animationController);
+    tabBody = GameScreen(animationController: animationController);
     super.initState();
   }
 
