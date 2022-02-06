@@ -1,4 +1,4 @@
-# sleep_cycle
+# Sleep Buddy
 
 Tartanhacks 2022
 
