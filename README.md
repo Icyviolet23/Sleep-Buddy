@@ -29,8 +29,8 @@ Our next challenge was implementing graphics in Flutter. As we were not familiar
 
 ## What we learned
 
-The biggest takeaway from the hackathon is learning a new 
+The biggest takeaway from the hackathon is learning a new language to implement Flutter (DART). This was definitely a really big takeaway, because flutter is a widely-known and useful app for mobile application development, hence, learning DART was very essential.
 
-- We learnt a new language!
-- We learnt how to make an app streamlined and well designed!
+After following some tutorials online, we learned how to streamline applications and make well-designed mobile applications. 
+
 - We learnt that everything is a widget in flutter.
