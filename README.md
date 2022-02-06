@@ -34,3 +34,7 @@ The biggest takeaway from the hackathon is learning a new language to implement 
 After following some tutorials online, we learned how to streamline applications and make well-designed mobile applications. 
 
 - We learnt that everything is a widget in flutter.
+
+## Template from
+
+https://github.com/mitesh77/Best-Flutter-UI-Templates
