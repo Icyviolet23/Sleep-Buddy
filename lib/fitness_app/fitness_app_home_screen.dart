@@ -1,3 +1,5 @@
+import 'package:best_flutter_ui_templates/fitness_app/StatsScreen/stats_screen.dart';
+import 'package:best_flutter_ui_templates/fitness_app/SocialMediaScreen/social_media_screen.dart';
 import 'package:best_flutter_ui_templates/fitness_app/game/game_screen.dart';
 import 'package:best_flutter_ui_templates/fitness_app/models/tabIcon_data.dart';
 import 'package:best_flutter_ui_templates/fitness_app/training/training_screen.dart';
@@ -81,7 +83,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
           tabIconsList: tabIconsList,
           addClick: () {},
           changeIndex: (int index) {
-            if (index == 0 || index == 2) {
+            if (index == 0) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
                   return;
@@ -99,6 +101,26 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 setState(() {
                   tabBody =
                       AlarmScreen(animationController: animationController);
+                });
+              });
+            } else if (index == 2) {
+              animationController?.reverse().then<dynamic>((data) {
+                if (!mounted) {
+                  return;
+                }
+                setState(() {
+                  tabBody =
+                      StatsScreen(animationController: animationController);
+                });
+              });
+            } else if (index == 3) {
+              animationController?.reverse().then<dynamic>((data) {
+                if (!mounted) {
+                  return;
+                }
+                setState(() {
+                  tabBody =
+                      SocialMediaScreen(animationController: animationController);
                 });
               });
             }
