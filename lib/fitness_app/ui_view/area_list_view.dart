@@ -135,7 +135,7 @@ class AreaView extends StatelessWidget {
                   highlightColor: Colors.transparent,
                   hoverColor: Colors.transparent,
                   borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                  splashColor: FitnessAppTheme.nearlyDarkBlue.withOpacity(0.2),
+                  splashColor: FitnessAppTheme.nearlyWhite.withOpacity(0.2),
                   onTap: () {},
                   child: Column(
                     children: <Widget>[
