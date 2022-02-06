@@ -1,5 +1,6 @@
 import 'package:best_flutter_ui_templates/fitness_app/StatsScreen/stats_screen.dart';
 import 'package:best_flutter_ui_templates/fitness_app/SocialMediaScreen/social_media_screen.dart';
+import 'package:best_flutter_ui_templates/fitness_app/game/game_screen.dart';
 import 'package:best_flutter_ui_templates/fitness_app/models/tabIcon_data.dart';
 import 'package:best_flutter_ui_templates/fitness_app/training/training_screen.dart';
 import 'package:flutter/material.dart';
@@ -89,7 +90,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 }
                 setState(() {
                   tabBody =
-                      MyDiaryScreen(animationController: animationController);
+                      GameScreen(animationController: animationController);
                 });
               });
             } else if (index == 1) {
