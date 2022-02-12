@@ -1,6 +1,5 @@
-# Sleep Buddy (https://www.youtube.com/watch?v=rizfjVbPnFM&feature=youtu.be)
-
-Tartanhacks 2022 (Figma Best Design Award)
+# Sleep Buddy (Figma Best Design Award @ Tartanhacks2022)
+https://www.youtube.com/watch?v=rizfjVbPnFM&feature=youtu.be
 
 
 ## Elevator Pitch
